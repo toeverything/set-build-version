@@ -1,21 +1,12 @@
-name: Authenticate GitHub Token
-author: '@DimensionDev'
+name: Set Build Version Variable
+author: '@toeverything'
 
-description: Authenticate npm for consuming and publishing packages from and to the GitHub Package Registry
+description: Set BUILD_VERSION to the environment variables
 
 branding:
   icon: package
   color: gray-dark
 
-inputs:
-  token:
-    description: The token used for authentication. Usually, this should be your `secrets.GITHUB_TOKEN`
-    default: ${{ github.token }}
-    required: true
-  registry:
-    description: Automatically set the registry
-    required: false
-
 runs:
-  using: node12
+  using: node16
   main: index.js
