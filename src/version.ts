@@ -6,6 +6,8 @@ export function samver(): string {
     date.getUTCFullYear(),
     date.getUTCMonth() + 1,
     date.getUTCDate(),
+    date.getUTCHours(),
+    date.getUTCMinutes(),
   ];
   const displayTime = timestamp
     .map((_) => _.toString().padStart(2, '0'))
