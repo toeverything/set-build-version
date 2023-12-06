@@ -1,0 +1,12 @@
+name: Set Build Version Variable
+author: '@toeverything'
+
+description: Set BUILD_VERSION to the environment variables
+
+branding:
+  icon: package
+  color: gray-dark
+
+runs:
+  using: node16
+  main: index.js
