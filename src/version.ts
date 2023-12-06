@@ -8,10 +8,9 @@ export function samver(): string {
     date.getUTCDate(),
     date.getUTCHours(),
     date.getUTCMinutes(),
-    date.getUTCSeconds(),
   ];
   const displayTime = timestamp
     .map((_) => _.toString().padStart(2, '0'))
     .join('');
-  return [displayTime, git.commitHash(true)].join('-');
+  return [displayTime, git.commitHash(true).slice(0, 7)].join('-');
 }
